@@ -16,6 +16,7 @@
     "@mastra/core": "^0.8.2",
     "@octokit/core": "^6.1.5",
     "@octokit/graphql": "^8.2.2",
+    "@types/cheerio": "^0.22.35",
     "mastra": "^0.4.8",
     "zod": "^3.24.2"
   },
