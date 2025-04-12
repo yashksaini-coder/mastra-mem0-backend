@@ -1,7 +1,6 @@
 import { createTool } from '@mastra/core/tools';
 import { z } from 'zod';
 import { octokit } from "../../utils/octokit";
-import { url } from 'inspector';
 
 interface GitHubResponse {
     ok: true;
