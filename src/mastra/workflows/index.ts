@@ -51,10 +51,7 @@ const getAuthorsStep = new Step({
       const name = commit.author.name;
       
       // Skip if email is a no-reply GitHub email
-      if (email && name && 
-          !email.includes('noreply@github.com') && 
-          !email.includes('users.noreply.github.com') &&
-          !email.includes('github.com')) {
+      if (email && !email.includes('@users.noreply.github.com')) {
         uniqueAuthors.set(email, {
           name: name,
           email: email,
@@ -136,7 +133,7 @@ const createCSVStep = new Step({
     const csvHeader = 'Name,Email,Subject,Body\n';
     
     // Write to CSV file
-    const outputPath = path.join(process.cwd(), 'output', 'mem0_emails.csv');
+    const outputPath = path.join(process.cwd(), 'output', 'emails.csv');
     fs.mkdirSync(path.dirname(outputPath), { recursive: true });
     fs.writeFileSync(outputPath, csvHeader + csvContent);
 
