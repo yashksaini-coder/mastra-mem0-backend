@@ -133,7 +133,7 @@ const createCSVStep = new Step({
     const csvHeader = 'Name,Email,Subject,Body\n';
     
     // Write to CSV file
-    const outputPath = path.join(process.cwd(), 'output', 'emails.csv');
+    const outputPath = path.join(process.cwd(), 'output', `${context.triggerData.owner}-${context.triggerData.repo}-emails.csv`);
     fs.mkdirSync(path.dirname(outputPath), { recursive: true });
     fs.writeFileSync(outputPath, csvHeader + csvContent);
 
