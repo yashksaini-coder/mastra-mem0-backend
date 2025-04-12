@@ -14,6 +14,7 @@
   "dependencies": {
     "@ai-sdk/groq": "^1.2.7",
     "@mastra/core": "^0.8.2",
+    "@mastra/mem0": "^0.0.4",
     "@octokit/core": "^6.1.5",
     "@octokit/graphql": "^8.2.2",
     "@types/cheerio": "^0.22.35",
