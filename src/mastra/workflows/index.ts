@@ -270,6 +270,6 @@ mem0Workflow
   .step(getAuthorsStep)
   .then(generateEmailsStep)
   .then(createMemoriesStep)
-  .then(createCSVStep);
+  .then(createCSVStep).commit();
 
 export default mem0Workflow;
